@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "hlDDEvJDNjwh4hffZHjSMFFvElkRtVWfNd46oERSe4RFuJEgO2R7k07X0M0fzpmZVm8E5AxoZwpIgBCqLBk6EQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\danie\\source\\repos\\C#\\MyBanker\\MyBanker\\MyBanker\\MyBanker.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\danie\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.18\\microsoft.netcore.app.host.win-x64.3.1.18.nupkg.sha512"
+  ],
+  "logs": []
+}

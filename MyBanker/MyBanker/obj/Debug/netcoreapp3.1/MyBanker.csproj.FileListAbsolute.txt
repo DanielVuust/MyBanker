@@ -1,0 +1,13 @@
+C:\Users\danie\source\repos\C#\MyBanker\MyBanker\MyBanker\bin\Debug\netcoreapp3.1\MyBanker.exe
+C:\Users\danie\source\repos\C#\MyBanker\MyBanker\MyBanker\bin\Debug\netcoreapp3.1\MyBanker.deps.json
+C:\Users\danie\source\repos\C#\MyBanker\MyBanker\MyBanker\bin\Debug\netcoreapp3.1\MyBanker.runtimeconfig.json
+C:\Users\danie\source\repos\C#\MyBanker\MyBanker\MyBanker\bin\Debug\netcoreapp3.1\MyBanker.runtimeconfig.dev.json
+C:\Users\danie\source\repos\C#\MyBanker\MyBanker\MyBanker\bin\Debug\netcoreapp3.1\MyBanker.dll
+C:\Users\danie\source\repos\C#\MyBanker\MyBanker\MyBanker\bin\Debug\netcoreapp3.1\MyBanker.pdb
+C:\Users\danie\source\repos\C#\MyBanker\MyBanker\MyBanker\obj\Debug\netcoreapp3.1\MyBanker.csprojAssemblyReference.cache
+C:\Users\danie\source\repos\C#\MyBanker\MyBanker\MyBanker\obj\Debug\netcoreapp3.1\MyBanker.AssemblyInfoInputs.cache
+C:\Users\danie\source\repos\C#\MyBanker\MyBanker\MyBanker\obj\Debug\netcoreapp3.1\MyBanker.AssemblyInfo.cs
+C:\Users\danie\source\repos\C#\MyBanker\MyBanker\MyBanker\obj\Debug\netcoreapp3.1\MyBanker.csproj.CoreCompileInputs.cache
+C:\Users\danie\source\repos\C#\MyBanker\MyBanker\MyBanker\obj\Debug\netcoreapp3.1\MyBanker.dll
+C:\Users\danie\source\repos\C#\MyBanker\MyBanker\MyBanker\obj\Debug\netcoreapp3.1\MyBanker.pdb
+C:\Users\danie\source\repos\C#\MyBanker\MyBanker\MyBanker\obj\Debug\netcoreapp3.1\MyBanker.genruntimeconfig.cache
