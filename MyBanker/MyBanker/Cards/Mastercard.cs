@@ -22,6 +22,7 @@ namespace MyBanker.Cards
                     : base(cardOwner, "Mastercard", 0, age)
         {
             base.CardNumberLength = 19;
+            //Converts the max credit to negative.
             base.MinSaldo = maxCredit * -1;
             base.Prefix = prifix;
         }

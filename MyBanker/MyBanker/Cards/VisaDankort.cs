@@ -15,11 +15,13 @@ namespace MyBanker.Cards
 
         public DateTime ExpiryDate { get { return expiryDate; } }
         public int MonthlyLimit { get { return monthlyLimit; } }
-        public int MonthlyLimit { get { return monthlyLimit; } }
+        public int MaxCredit { get { return maxCredit; } }
         public VisaDankort(string cardOwner, int age)
             : base(cardOwner, "VisaDankort", 0, age)
         {
             base.Prefix = prifix;
+            //Converts the max credit to negative.
+            base.MinSaldo = maxCredit * -1;
         }
     }
 }
