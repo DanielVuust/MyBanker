@@ -4,8 +4,7 @@ using System.Text;
 
 namespace MyBanker.Interfaces
 {
-    public interface IDailyLimit
+    class IAccount
     {
-        public int DailyLimit { get; }
     }
 }

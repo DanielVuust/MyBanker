@@ -4,8 +4,7 @@ using System.Text;
 
 namespace MyBanker.Interfaces
 {
-    public interface IIsPayableOnline
+    class IInternationalCardType
     {
-        public bool IsPayableOnline { get; }
     }
 }

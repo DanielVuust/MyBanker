@@ -49,7 +49,7 @@ namespace MyBanker
             //Sets the random prefix to be the start of the card num.
             cardNumber += Prefix[prefixIndex];
 
-            //Loops through untill the specific lenght is reached.
+            //Loops through until the specific length is reached.
             while (cardNumber.Length < cardNumberLength)
             {
                 cardNumber += ran.Next(9).ToString();
@@ -61,7 +61,7 @@ namespace MyBanker
             string accountNumber = "3520";
             Random ran = new Random();
 
-            //Loops through untill 
+            //Loops through until the desired length is reached 
             while (accountNumber.Length < 14)
             {
                 accountNumber += ran.Next(9).ToString();

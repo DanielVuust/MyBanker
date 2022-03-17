@@ -1,33 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\danie\\source\\repos\\C#\\MyBanker\\MyBanker\\MyBanker\\MyBanker.csproj": {}
+    "C:\\Users\\davu\\source\\repos\\Skole\\H2\\MyBanker\\MyBanker\\MyBanker\\MyBanker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\danie\\source\\repos\\C#\\MyBanker\\MyBanker\\MyBanker\\MyBanker.csproj": {
+    "C:\\Users\\davu\\source\\repos\\Skole\\H2\\MyBanker\\MyBanker\\MyBanker\\MyBanker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\danie\\source\\repos\\C#\\MyBanker\\MyBanker\\MyBanker\\MyBanker.csproj",
+        "projectUniqueName": "C:\\Users\\davu\\source\\repos\\Skole\\H2\\MyBanker\\MyBanker\\MyBanker\\MyBanker.csproj",
         "projectName": "MyBanker",
-        "projectPath": "C:\\Users\\danie\\source\\repos\\C#\\MyBanker\\MyBanker\\MyBanker\\MyBanker.csproj",
-        "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\danie\\source\\repos\\C#\\MyBanker\\MyBanker\\MyBanker\\obj\\",
+        "projectPath": "C:\\Users\\davu\\source\\repos\\Skole\\H2\\MyBanker\\MyBanker\\MyBanker\\MyBanker.csproj",
+        "packagesPath": "C:\\Users\\davu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\davu\\source\\repos\\Skole\\H2\\MyBanker\\MyBanker\\MyBanker\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\danie\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\davu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "c:\\NugetRepository": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -55,18 +50,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.18, 3.1.18]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

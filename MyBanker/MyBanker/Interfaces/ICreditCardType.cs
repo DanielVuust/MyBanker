@@ -4,8 +4,7 @@ using System.Text;
 
 namespace MyBanker.Interfaces
 {
-    public interface IMaxCredit
+    class ICreditCardType
     {
-        public int MaxCredit { get; }
     }
 }
