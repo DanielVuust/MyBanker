@@ -4,7 +4,8 @@ using System.Text;
 
 namespace MyBanker.Interfaces
 {
-    class ITransactionCardType
+    public interface ITransactionCardType : ICardType
     {
+        int GetAgeLimit();
     }
 }

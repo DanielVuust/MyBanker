@@ -5,23 +5,61 @@ using System.Text;
 
 namespace MyBanker.Cards
 {
-    class VisaDankort : Card, IExpiryDate, IMonthlyLimit, IMaxCredit
+    class VisaDankort : CreditCard
     {
-        private string[] prifix = { "4" };
-        private DateTime expiryDate = DateTime.UtcNow.AddYears(5);
-        private int monthlyLimit = 25000;
-        private int maxCredit = 20000;
-
-
-        public DateTime ExpiryDate { get { return expiryDate; } }
-        public int MonthlyLimit { get { return monthlyLimit; } }
-        public int MaxCredit { get { return maxCredit; } }
-        public VisaDankort(string cardOwner, int age)
-            : base(cardOwner, "VisaDankort", 0, age)
+        public VisaDankort(ICardOwner cardOwner, ICardType cardType, IAccount account) : base(cardOwner, cardType, account)
         {
-            base.Prefix = prifix;
-            //Converts the max credit to negative.
-            base.MinSaldo = maxCredit * -1;
+        }
+
+        public override string GetCardName()
+        {
+            return "Visa/Dankort";
+        }
+
+        public override int GetAgeLimit()
+        {
+            return 18;
+        }
+
+        public override string GenerateNumber()
+        {
+            string cardNum = "4";
+            while(cardNum.Length <= 16)
+            {
+                cardNum += ran.Next(0, 10);
+            }
+
+            return cardNum;
+        }
+
+        public override double GetCurrentSaldo()
+        {
+            return ran.Next(1000, 20000);
+        }
+
+        public override int GetExpiryMonth()
+        {
+            return ran.Next(1, 13);
+        }
+
+        public override int GetExpiryYear()
+        {
+            return ran.Next(2022, 2027);
+        }
+
+        public override int GetCreditLimit()
+        {
+            return 20000;
+        }
+
+        public override int GetMonthlyLimit()
+        {
+            return 25000;
+        }
+
+        public override int GetDailyLimit()
+        {
+            return 10000;
         }
     }
 }

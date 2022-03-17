@@ -1,30 +1,62 @@
 ﻿using MyBanker.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace MyBanker.Cards
 {
-    class Mastercard : Card, IExpiryDate, IDailyLimit, IMonthlyLimit, IMaxCredit
+    public class Mastercard : CreditCard
     {
-        private string[] prifix = { "51", "52", "53", "54", "55" };
-        private DateTime expiryDate = DateTime.UtcNow.AddYears(5);
-        private int dailyLimit = 5000;
-        private int monthlyLimit = 30000;
-        private int maxCredit = 40000;
-
-        public DateTime ExpiryDate { get { return expiryDate; } }
-        public int DailyLimit { get { return dailyLimit; } }
-        public int MonthlyLimit { get { return monthlyLimit; } }
-        public int MaxCredit { get { return maxCredit; } }
-
-        public Mastercard(string cardOwner, int age)
-                    : base(cardOwner, "Mastercard", 0, age)
+        private Random ran = new Random();
+        public Mastercard(ICardOwner cardOwner, ICardType cardType, IAccount account) 
+            : base(cardOwner, cardType, account)
         {
-            base.CardNumberLength = 19;
-            //Converts the max credit to negative.
-            base.MinSaldo = maxCredit * -1;
-            base.Prefix = prifix;
+        }
+
+        public override string GetCardName()
+        {
+            return "Mastercard";
+        }
+
+        public override int GetAgeLimit()
+        {
+            return 18;
+        }
+
+        public override string GenerateNumber()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override double GetCurrentSaldo()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override int GetExpiryMonth()
+        {
+            return ran.Next(1, 13);
+        }
+
+        public override int GetExpiryYear()
+        {
+            return ran.Next(2022, 2027);
+        }
+
+        public override int GetCreditLimit()
+        {
+            return 40000;
+        }
+
+        public override int GetMonthlyLimit()
+        {
+            return 30000;
+        }
+
+        public override int GetDailyLimit()
+        {
+            return 10000;
         }
     }
 }

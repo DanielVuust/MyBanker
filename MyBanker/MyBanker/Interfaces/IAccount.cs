@@ -4,7 +4,9 @@ using System.Text;
 
 namespace MyBanker.Interfaces
 {
-    class IAccount
+    public interface IAccount
     {
+        string GetRegistrationNumber();
+        string GetAccountNumber();
     }
 }

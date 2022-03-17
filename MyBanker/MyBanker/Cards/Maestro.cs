@@ -5,21 +5,57 @@ using System.Text;
 
 namespace MyBanker.Cards
 {
-    public class Maestro : Card, IExpiryDate, IIsPayableInternational, IIsPayableOnline
+    public class Maestro : ExtendedDebitCard
     {
-        private readonly string[] prifix = { "5018", "5020", "5038", "5893", "6304", "6759", "6761", "6762", "6763"};
-        private DateTime expiryDate = DateTime.UtcNow.AddYears(5).AddMonths(8);
-        private bool isPayableInternational = true;
-        private bool isPayableOnline = true;
-
-        public DateTime ExpiryDate { get { return expiryDate; } }
-        public bool IsPayableInternational { get { return isPayableInternational; } }
-        public bool IsPayableOnline { get { return isPayableOnline; } }
-
-        public Maestro(string cardOwner, int age) 
-            : base(cardOwner, "Maestro", 0, age)
+        public Maestro(ICardOwner cardOwner, ICardType cardType, IAccount account) 
+            : base(cardOwner, cardType, account)
         {
-            base.Prefix = prifix;
+        }
+
+        public override string GetCardName()
+        {
+            return "Maestro";
+        }
+
+        public override int GetAgeLimit()
+        {
+            return 18;
+        }
+
+        public override string GenerateNumber()
+        {
+            string cardNum = "4";
+            while (cardNum.Length <= 16)
+            {
+                cardNum += ran.Next(0, 10);
+            }
+
+            return cardNum;
+        }
+
+        public override double GetCurrentSaldo()
+        {
+            return ran.Next(0, 20000);
+        }
+
+        public override int GetExpiryMonth()
+        {
+            return ran.Next(1, 13);
+        }
+
+        public override int GetExpiryYear()
+        {
+            return ran.Next(2022, 2027);
+        }
+
+        public override bool IsPayableInternational()
+        {
+            return true;
+        }
+
+        public override bool IsPayableOnline()
+        {
+            return true;
         }
     }
 }

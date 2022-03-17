@@ -1,22 +1,45 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using MyBanker.Interfaces;
 
 namespace MyBanker.Cards
 {
-    public class Hævekort : Card
+    public class Hævekort : Card, ITransactionCardType
     {
-        private string[] prifix = { "2400" };
-
-        public Hævekort(string cardOwner, int age)
-            : base(cardOwner, "Hævekort", 0, age)
+        public Hævekort(ICardOwner cardOwner, ICardType cardType, IAccount account) : base(cardOwner, cardType, account)
         {
-            base.Prefix = prifix;
         }
-        //Will always be true because its allowed to be over 18 when getting the card, though its primaryly used by people under 18.
-        public override bool LegalAge(int age)
+
+        public override string GetCardName()
         {
-            return true;
+            return "Hævekort";
+        }
+
+        public override CardType GetCardType()
+        {
+            return CardType.DebitCard;
+        }
+
+        public override int GetAgeLimit()
+        {
+            return 0;
+        }
+
+        public override string GenerateNumber()
+        {
+            string cardNum = "2400";
+            while (cardNum.Length <= 16)
+            {
+                cardNum += ran.Next(0, 10);
+            }
+
+            return cardNum;
+        }
+
+        public override double GetCurrentSaldo()
+        {
+            return ran.Next(2000, 20000);
         }
     }
 }

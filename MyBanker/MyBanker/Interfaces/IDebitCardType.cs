@@ -4,7 +4,8 @@ using System.Text;
 
 namespace MyBanker.Interfaces
 {
-    class IDebitCardType
+    public interface IDebitCardType : ICardType
     {
+        
     }
 }

@@ -4,7 +4,9 @@ using System.Text;
 
 namespace MyBanker
 {
-    class CardType
+    public enum CardType
     {
+        DebitCard,
+        CreditCard
     }
 }

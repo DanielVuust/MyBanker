@@ -4,7 +4,11 @@ using System.Text;
 
 namespace MyBanker.Interfaces
 {
-    class ICreditCardType
+    public interface ICreditCardType : IExpiryingCardType
     {
+        int GetCreditLimit();
+        int GetMonthlyLimit();
+        //@TODO Fix this
+        int GetDailyLimit();
     }
 }

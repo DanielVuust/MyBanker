@@ -4,7 +4,9 @@ using System.Text;
 
 namespace MyBanker.Interfaces
 {
-    class IExpirying
+    public interface IExpiryingCardType : ITransactionCardType
     {
+        int GetExpiryMonth();
+        int GetExpiryYear();
     }
 }

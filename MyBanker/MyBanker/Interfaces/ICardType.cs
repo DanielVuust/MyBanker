@@ -4,7 +4,12 @@ using System.Text;
 
 namespace MyBanker.Interfaces
 {
-    class ICardType
+    public interface ICardType
     {
+        string GetCardName();
+        CardType GetCardType();
+        string GenerateNumber();
+        double GetCurrentSaldo();
+        
     }
 }

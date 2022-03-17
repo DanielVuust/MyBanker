@@ -6,6 +6,7 @@ namespace MyBanker.Interfaces
 {
     public interface IExpiryDate
     {
-        public DateTime ExpiryDate { get; }
+        int GetExpiryMonth();
+        int GetExpiryYear();
     }
 }
