@@ -7,7 +7,7 @@ namespace MyBanker.Cards
 {
     public class Hævekort : Card, ITransactionCardType
     {
-        public Hævekort(ICardOwner cardOwner, ICardType cardType, IAccount account) : base(cardOwner, cardType, account)
+        public Hævekort(ICardOwner cardOwner, ICardType cardType, IAccount account) : base(cardOwner, account)
         {
         }
 

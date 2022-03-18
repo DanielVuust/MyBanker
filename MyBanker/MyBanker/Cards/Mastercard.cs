@@ -8,9 +8,9 @@ namespace MyBanker.Cards
 {
     public class Mastercard : CreditCard
     {
-        private Random ran = new Random();
-        public Mastercard(ICardOwner cardOwner, ICardType cardType, IAccount account) 
-            : base(cardOwner, cardType, account)
+        
+        public Mastercard(ICardOwner cardOwner, IAccount account) 
+            : base(cardOwner, account)
         {
         }
 
@@ -36,11 +36,14 @@ namespace MyBanker.Cards
 
         public override int GetExpiryMonth()
         {
+             Random ran = new Random();
             return ran.Next(1, 13);
         }
 
         public override int GetExpiryYear()
         {
+            Random ran = new Random();
+
             return ran.Next(2022, 2027);
         }
 

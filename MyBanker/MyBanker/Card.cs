@@ -9,15 +9,13 @@ namespace MyBanker
     {
         protected ICardOwner cardOwner;
         protected IAccount account;
-        protected ICardType cardType;
 
         protected Random ran = new Random();
 
-        public Card(ICardOwner cardOwner, ICardType cardType, IAccount account)
+        public Card(ICardOwner cardOwner, IAccount account)
         {
             this.cardOwner = cardOwner;
             this.account = account;
-            this.cardType = cardType;
         }
 
         public abstract string GetCardName();

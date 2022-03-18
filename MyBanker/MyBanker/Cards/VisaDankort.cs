@@ -7,7 +7,7 @@ namespace MyBanker.Cards
 {
     class VisaDankort : CreditCard
     {
-        public VisaDankort(ICardOwner cardOwner, ICardType cardType, IAccount account) : base(cardOwner, cardType, account)
+        public VisaDankort(ICardOwner cardOwner, ICardType cardType, IAccount account) : base(cardOwner, account)
         {
         }
 

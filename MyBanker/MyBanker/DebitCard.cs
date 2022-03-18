@@ -8,7 +8,7 @@ namespace MyBanker
     public abstract class DebitCard : Card, IDebitCardType
     {
         protected DebitCard(ICardOwner cardOwner, ICardType cardType, IAccount account) 
-            : base(cardOwner, cardType, account)
+            : base(cardOwner, account)
         {
         }
 

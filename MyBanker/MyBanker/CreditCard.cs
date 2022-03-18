@@ -7,8 +7,8 @@ namespace MyBanker
 {
     public abstract class CreditCard : Card, ICreditCardType
     {
-        protected CreditCard(ICardOwner cardOwner, ICardType cardType, IAccount account) 
-            : base(cardOwner, cardType, account)
+        protected CreditCard(ICardOwner cardOwner,  IAccount account) 
+            : base(cardOwner, account)
         {
         }
 
