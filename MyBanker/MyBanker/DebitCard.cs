@@ -5,9 +5,9 @@ using MyBanker.Interfaces;
 
 namespace MyBanker
 {
-    public abstract class DebitCard : Card, IDebitCardType
+    public abstract class DebitCard : Card, IExpiryingCardType
     {
-        protected DebitCard(ICardOwner cardOwner, ICardType cardType, IAccount account) 
+        protected DebitCard(ICardOwner cardOwner, IAccount account) 
             : base(cardOwner, account)
         {
         }
@@ -17,5 +17,8 @@ namespace MyBanker
             return CardType.DebitCard;
         }
 
+        public abstract int GetExpiryMonth();
+
+        public abstract int GetExpiryYear();
     }
 }

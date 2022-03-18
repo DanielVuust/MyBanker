@@ -7,6 +7,11 @@ namespace MyBanker.Cards
 {
     public class Hævekort : Card, ITransactionCardType
     {
+        private readonly string[] cardNumPrefix = new string[]
+        {
+            "2400"
+        };
+        private readonly int cardLength = 16;
         public Hævekort(ICardOwner cardOwner, ICardType cardType, IAccount account) : base(cardOwner, account)
         {
         }
@@ -28,8 +33,8 @@ namespace MyBanker.Cards
 
         public override string GenerateNumber()
         {
-            string cardNum = "2400";
-            while (cardNum.Length <= 16)
+            string cardNum = cardNumPrefix[ran.Next(cardNumPrefix.Length)];
+            while (cardNum.Length <= cardLength)
             {
                 cardNum += ran.Next(0, 10);
             }

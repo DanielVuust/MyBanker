@@ -7,7 +7,13 @@ namespace MyBanker.Cards
 {
     class VisaDankort : CreditCard
     {
-        public VisaDankort(ICardOwner cardOwner, ICardType cardType, IAccount account) : base(cardOwner, account)
+        private readonly string[] cardNumPrefix = new string[]
+        {
+            "4"
+        };
+        private readonly int cardLength = 16;
+        public VisaDankort(ICardOwner cardOwner, IAccount account) 
+            : base(cardOwner, account)
         {
         }
 
@@ -23,8 +29,8 @@ namespace MyBanker.Cards
 
         public override string GenerateNumber()
         {
-            string cardNum = "4";
-            while(cardNum.Length <= 16)
+            string cardNum = cardNumPrefix[ran.Next(cardNumPrefix.Length)];
+            while (cardNum.Length <= cardLength)
             {
                 cardNum += ran.Next(0, 10);
             }

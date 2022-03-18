@@ -8,7 +8,11 @@ namespace MyBanker.Cards
 {
     public class Mastercard : CreditCard
     {
-        
+        private readonly string[] cardNumPrefix = new string[]
+        {
+            "51", "52", "53", "54", "55"
+        };
+        private readonly int cardLength = 19;
         public Mastercard(ICardOwner cardOwner, IAccount account) 
             : base(cardOwner, account)
         {
@@ -26,24 +30,27 @@ namespace MyBanker.Cards
 
         public override string GenerateNumber()
         {
-            throw new NotImplementedException();
+            string cardNum = cardNumPrefix[ran.Next(cardNumPrefix.Length)];
+            while (cardNum.Length <= cardLength)
+            {
+                cardNum += ran.Next(0, 10);
+            }
+
+            return cardNum;
         }
 
         public override double GetCurrentSaldo()
         {
-            throw new NotImplementedException();
+            return ran.Next(1, 200000);
         }
 
         public override int GetExpiryMonth()
         {
-             Random ran = new Random();
             return ran.Next(1, 13);
         }
 
         public override int GetExpiryYear()
         {
-            Random ran = new Random();
-
             return ran.Next(2022, 2027);
         }
 

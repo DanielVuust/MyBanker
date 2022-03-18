@@ -5,16 +5,22 @@ using System.Text;
 
 namespace MyBanker
 {
-    class CardOwner1 : ICardOwner
+    class CardOwner : ICardOwner
     {
+        private string name;
+        private int age;
+        public CardOwner(string name, int age)
+        {
+
+        }
         public int GetCardOwnerAge()
         {
-            return 20;
+            return age;
         }
 
         public string GetCardOwnerName()
         {
-            return "Daniel";
+            return name;
         }
     }
 }

@@ -5,10 +5,15 @@ using System.Text;
 
 namespace MyBanker.Cards
 {
-    public class Maestro : ExtendedDebitCard
+    public class Maestro : DebitCard, IInternationalCardType, IOnlineCardType
     {
-        public Maestro(ICardOwner cardOwner, ICardType cardType, IAccount account) 
-            : base(cardOwner, cardType, account)
+        private readonly string[] cardNumPrefix = new string[]
+        {
+        "5018", "5020", "5038", "5893", "6304", "6759", "6761", "6762", "6763"
+        };
+        private readonly int cardLength = 16;
+        public Maestro(ICardOwner cardOwner, IAccount account) 
+            : base(cardOwner, account)
         {
         }
 
@@ -24,8 +29,8 @@ namespace MyBanker.Cards
 
         public override string GenerateNumber()
         {
-            string cardNum = "4";
-            while (cardNum.Length <= 16)
+            string cardNum = cardNumPrefix[ran.Next(cardNumPrefix.Length)];
+            while (cardNum.Length <= cardLength)
             {
                 cardNum += ran.Next(0, 10);
             }
@@ -48,12 +53,12 @@ namespace MyBanker.Cards
             return ran.Next(2022, 2027);
         }
 
-        public override bool IsPayableInternational()
+        public bool IsPayableInternational()
         {
             return true;
         }
 
-        public override bool IsPayableOnline()
+        public bool IsPayableOnline()
         {
             return true;
         }
